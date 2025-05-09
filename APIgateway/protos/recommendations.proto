@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+service Recommender {
+  rpc GetRecommendations (GenreRequest) returns (MovieList);
+}
+
+message GenreRequest {
+  string genre = 1;
+}
+
+message MovieList {
+  repeated string movies = 1;
+}
